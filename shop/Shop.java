@@ -10,12 +10,7 @@ public class Shop {
 
     public Shop(Product... products){
         for (Product p : products){
-            if (productToCount.containsKey(p)){
-                Integer db = productToCount.get(p) + 1;
-                productToCount.replace(p, db);
-            } else {
-                productToCount.put(p, 1);
-            }
+            stockProduct(p);
         }
     }
 

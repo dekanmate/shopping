@@ -1,5 +1,6 @@
 package shop.products;
 
+import java.util.Objects;
 import shop.products.util.ProductType;
 
 public class Product {
@@ -21,11 +22,17 @@ public class Product {
 
     public boolean equals(Object obj){
         if (obj == this) return true;
-        return false;
-        
+
+        if (obj == null || getClass() != obj.getClass())
+        {
+            return false;
+        }
+
+        Product other = (Product) obj;
+        return price == other.price && productType == other.productType;
     }
 
     public int hashCode(){
-        return 0;
+        return Objects.hash(productType, price);
     }
 }
