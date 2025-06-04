@@ -14,7 +14,7 @@ public class ShopTest {
         "BREAD, 50, true",
         "EGGS, 40, false"
     })
-    public void testShopHasProduct(String productType, String productPrice, boolean verdict){
+    public void testShopHasProduct(String productType, int productPrice, boolean verdict){
         Product p = new Product(ProductType.BREAD, 50);
         Shop shop = new Shop(new Product[]{p});
         assertEquals(shop.hasProduct(p), verdict);

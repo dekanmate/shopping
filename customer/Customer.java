@@ -2,13 +2,14 @@ package customer;
 
 import customer.util.Shopper;
 import java.util.List;
+import java.util.ArrayList;
 import shop.products.Product;
 import shop.Shop;
 import shop.products.util.*;
 
 public class Customer implements Shopper{
     private String name;
-    private List<Product> shoppingCart;
+    private List<Product> shoppingCart = new ArrayList<Product>();
     private Shop shop;
 
     public Customer(String name){

@@ -3,9 +3,10 @@ package shop;
 import shop.products.util.*;
 import shop.products.Product;
 import java.util.Map;
+import java.util.HashMap;
 
 public class Shop {
-    private Map<Product, Integer> productToCount;
+    private Map<Product, Integer> productToCount = new HashMap<Product, Integer>();
 
     public Shop(Product... products){
         for (Product p : products){
